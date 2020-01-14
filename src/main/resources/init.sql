@@ -244,6 +244,6 @@ INSERT INTO users(user_surname, user_firstname, user_email, user_password, user_
 ('admin', 'admin', 'admin.admin.hu', '1000:5faf472fa87efaff161590ab1668669d:5f0bb5d45e8a9014a3335d4663aa1cec05c29bbfb29b9d8bae7f5a8a77c9ab4acaa56966a595aadf1d0480cc9b1a7f010a0eeafbc67d7fabf85de4924d80699e', '+36306985412', 'Hungary', '2489 Vác', 'Fő út 325', 'ADMIN');
 
 -- Bookings
-INSERT INTO bookings(user_id, booking_arrival_date, booking_number_of_nights, booking_number_of_apartmans_needed, booking_total_number_of_guests, booking_number_of_children, booking_agelist_of_children, booking_arrival_hour, booking_leaving_hour) VALUES(1, '2019-12-10', 7, 2, 6, 4, [1, 3, 4, 6], 15, 10);
+INSERT INTO bookings(user_id, booking_arrival_date, booking_number_of_nights, booking_number_of_apartmans_needed, booking_total_number_of_guests, booking_number_of_children, booking_agelist_of_children, booking_arrival_hour, booking_leaving_hour) VALUES(1, '2020-04-10', 7, 2, 6, 4, array[1, 3, 4, 6], 15, 10);
 
-INSERT INTO bookings(user_id, booking_arrival_date, booking_number_of_nights, booking_number_of_apartmans_needed, booking_total_number_of_guests, booking_arrival_hour) VALUES(2, '2019-12-14', 4, 1, 2, 18);
+INSERT INTO bookings(user_id, booking_arrival_date, booking_number_of_nights, booking_number_of_apartmans_needed, booking_total_number_of_guests, booking_arrival_hour) VALUES(2, '2020-04-14', 4, 1, 2, 18);

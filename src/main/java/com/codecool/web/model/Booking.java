@@ -62,16 +62,11 @@ public final class Booking {
             number_of_apartmans_needed == booking.number_of_apartmans_needed &&
             total_number_of_guests == booking.total_number_of_guests &&
             number_of_children == booking.number_of_children &&
-            arrival_hour == booking.arrival_hour &&
-            leaving_hour == booking.leaving_hour &&
-            arrival_date.equals(booking.arrival_date) &&
-            Arrays.equals(agelist_of_children, booking.agelist_of_children);
+            arrival_date.equals(booking.arrival_date);
     }
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(user_id, arrival_date, number_of_nights, number_of_apartmans_needed, total_number_of_guests, number_of_children, arrival_hour, leaving_hour);
-        result = 31 * result + Arrays.hashCode(agelist_of_children);
-        return result;
+        return Objects.hash(user_id, arrival_date, number_of_nights, number_of_apartmans_needed, total_number_of_guests, number_of_children);
     }
 }

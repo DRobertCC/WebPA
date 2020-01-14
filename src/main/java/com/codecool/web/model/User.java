@@ -85,20 +85,13 @@ public final class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return id == user.id &&
-            surname.equals(user.surname) &&
+        return surname.equals(user.surname) &&
             firstname.equals(user.firstname) &&
-            email.equals(user.email) &&
-            password.equals(user.password) &&
-            phone.equals(user.phone) &&
-            country.equals(user.country) &&
-            postal_code_and_city.equals(user.postal_code_and_city) &&
-            rest_of_address.equals(user.rest_of_address) &&
-            role == user.role;
+            email.equals(user.email);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, surname, firstname, email, password, phone, country, postal_code_and_city, rest_of_address, role);
+        return Objects.hash(surname, firstname, email);
     }
 }
