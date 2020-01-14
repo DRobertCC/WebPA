@@ -88,9 +88,9 @@ public final class SimpleUserService implements UserService {
     @Override
     public User loginUser(String email, String password) throws SQLException, ServiceException {
         PasswordService passwordService = new PasswordService();
-        if (email.equals("Guest")) {
-            return new User(0, "Guest", "Guest", "Guest", Role.GUEST);
-        } else {
+//        if (email.equals("Guest")) {
+//            return new User(0, "Guest", "Guest", "Guest", Role.GUEST);
+//        } else {
             try {
                 User user = userDao.findUserByEmail(email);
                 if (user == null || !passwordService.validatePassword(password, user.getPassword())) {
@@ -102,4 +102,4 @@ public final class SimpleUserService implements UserService {
             }
         }
     }
-}
+//}
